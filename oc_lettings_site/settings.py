@@ -2,6 +2,8 @@ import os
 
 from pathlib import Path
 
+import oc_lettings_site
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
