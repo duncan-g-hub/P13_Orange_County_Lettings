@@ -7,7 +7,7 @@ from lettings.models import Letting
 def lettings_index(request):
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
-    return render(request, 'lettings_index.html', context)
+    return render(request, 'index.html', context)
 
 
 #Cras ultricies dignissim purus, vitae hendrerit ex varius non. In accumsan porta nisl id eleifend. Praesent dignissim, odio eu consequat pretium, purus urna vulputate arcu, vitae efficitur
