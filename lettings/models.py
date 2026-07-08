@@ -4,7 +4,6 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinLengthValidator
 
 
-
 class Address(models.Model):
     """Represents an address."""
     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
@@ -37,4 +36,3 @@ class Letting(models.Model):
     def __str__(self):
         """Return the letting title."""
         return self.title
-
