@@ -10,8 +10,12 @@ def index(request):
 
 
 
-def test_404_view(request):
-    return render(request, '404.html')
 
-def test_500_view(request):
-    return render(request, '500.html')
+
+# TEST ERRORS
+#
+# def test_404_view(request):
+#     return render(request, '404.html')
+#
+# def test_500_view(request):
+#     return render(request, '500.html')
