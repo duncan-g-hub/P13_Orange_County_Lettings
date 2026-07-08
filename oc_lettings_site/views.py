@@ -1,3 +1,5 @@
+"""Views for the project."""
+
 from django.shortcuts import render
 
 
@@ -5,6 +7,7 @@ from django.shortcuts import render
 # vitae dapibus nisi lorem dapibus sem. Maecenas pharetra purus ipsum, eget consequat ipsum lobortis quis. Phasellus eleifend ex auctor venenatis tempus.
 # Aliquam vitae erat ac orci placerat luctus. Nullam elementum urna nisi, pellentesque iaculis enim cursus in. Praesent volutpat porttitor magna, non finibus neque cursus id.
 def index(request):
+    """Display the home page."""
     return render(request, 'index.html')
 
 
