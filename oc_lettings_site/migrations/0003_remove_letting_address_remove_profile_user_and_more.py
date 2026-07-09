@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
     to the dedicated lettings and profiles apps.
     """
     dependencies = [
-        ('oc_lettings_site', '0002_alter_address_id_alter_letting_address_and_more'),
+        ("oc_lettings_site", "0002_alter_address_id_alter_letting_address_and_more"),
+        ("lettings", "0002_copy_data"),
+        ("profiles", "0002_copy_data"),
     ]
 
     operations = [
