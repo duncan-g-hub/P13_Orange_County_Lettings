@@ -1,2 +1,8 @@
 [run]
-omit = tests/*
+omit =
+    */tests/*
+    */migrations/*
+    */settings.py
+    */asgi.py
+    */wsgi.py
+    manage.py
