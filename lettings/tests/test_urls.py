@@ -2,6 +2,7 @@ from django.urls import reverse, resolve
 
 from lettings.views import index, letting
 
+
 def test_url_index():
     url = reverse('lettings_index')
     assert resolve(url).view_name == 'lettings_index'

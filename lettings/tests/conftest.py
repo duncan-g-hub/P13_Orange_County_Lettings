@@ -28,4 +28,3 @@ def letting_test(address_test):
         address=address_test,
     )
     return letting
-

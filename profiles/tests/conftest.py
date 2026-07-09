@@ -9,7 +9,6 @@ def client():
     return Client()
 
 
-
 @pytest.fixture
 def user_test():
     user = User.objects.create_user(
@@ -29,6 +28,3 @@ def profile_test(user_test):
         favorite_city="Test City"
     )
     return profile
-
-
-

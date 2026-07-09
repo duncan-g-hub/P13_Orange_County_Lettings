@@ -3,7 +3,6 @@ import pytest
 from pytest_django.asserts import assertTemplateUsed
 
 
-
 @pytest.mark.django_db
 def test_index_view(client, profile_test):
     response = client.get(reverse('profiles_index'))
