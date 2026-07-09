@@ -23,5 +23,5 @@ def test_letting_view(client, letting_test):
 
 @pytest.mark.django_db
 def test_letting_view_returns_404(client):
-    response = client.get("/lettings/9999/")
+    response = client.get(reverse("letting", args=["999"]))
     assert response.status_code == 404
