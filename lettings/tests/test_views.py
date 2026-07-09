@@ -18,7 +18,7 @@ def test_letting_view(client, letting_test):
     assert response.status_code == 200
     assertTemplateUsed(response, 'lettings/letting.html')
     assert response.context["title"] == letting_test.title
-    assert (response.context["address"] == letting_test.address)
+    assert response.context["address"] == letting_test.address
 
 
 @pytest.mark.django_db
