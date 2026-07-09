@@ -2,13 +2,14 @@ import pytest
 from django.test import Client
 from lettings.models import Letting, Address
 
+
 @pytest.fixture
 def client():
     return Client()
 
 
 @pytest.fixture
-def letting_test():
+def address_test():
     address = Address.objects.create(
         number=10,
         street="Test Street",
@@ -17,9 +18,14 @@ def letting_test():
         zip_code=75000,
         country_iso_code="FRA",
     )
+    return address
 
+
+@pytest.fixture
+def letting_test(address_test):
     letting = Letting.objects.create(
         title="Test Letting",
-        address=address,
+        address=address_test,
     )
     return letting
+
