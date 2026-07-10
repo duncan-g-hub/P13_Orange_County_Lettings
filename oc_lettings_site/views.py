@@ -1,7 +1,9 @@
 """Views for the project."""
 
 from django.shortcuts import render
+import logging
 
+logger = logging.getLogger(__name__)
 
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 # Quisque molestie quam lobortis leo consectetur ullamcorper non id est.
@@ -14,6 +16,7 @@ from django.shortcuts import render
 # Praesent volutpat porttitor magna, non finibus neque cursus id.
 def index(request):
     """Display the home page."""
+    logger.info("Displaying home page.")
     return render(request, 'index.html')
 
 # TEST ERRORS

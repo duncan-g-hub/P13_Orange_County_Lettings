@@ -2,7 +2,9 @@
 
 from django.shortcuts import render, get_object_or_404
 from lettings.models import Letting
+import logging
 
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 # Aenean leo magna, vestibulum et tincidunt fermentum, consectetur quis velit.
@@ -14,6 +16,7 @@ def index(request):
     """Display all lettings."""
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
+    logger.info("Displaying lettings list.")
     return render(request, 'lettings/index.html', context)
 
 
@@ -33,9 +36,11 @@ def index(request):
 # Integer vehicula tincidunt enim, ac lacinia augue pulvinar sit amet.
 def letting(request, letting_id):
     """Display a letting."""
+    logger.info(f"Requesting letting id={letting_id}.")
     letting = get_object_or_404(Letting, id=letting_id)
     context = {
         'title': letting.title,
         'address': letting.address,
     }
+    logger.info(f"Loading letting {letting.title} (id: {letting_id}).")
     return render(request, 'lettings/letting.html', context)

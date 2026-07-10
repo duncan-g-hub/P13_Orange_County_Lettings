@@ -2,7 +2,9 @@
 
 from django.shortcuts import render, get_object_or_404
 from profiles.models import Profile
+import logging
 
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 # Sed placerat quam in pulvinar commodo.
@@ -12,6 +14,7 @@ def index(request):
     """Display all profiles."""
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}
+    logger.info("Displaying profiles list.")
     return render(request, 'profiles/index.html', context)
 
 
@@ -21,6 +24,8 @@ def index(request):
 # Nam aliquam dignissim congue. Pellentesque habitant morbi tristique senectus et netus et males
 def profile(request, username):
     """Display a user profile."""
+    logger.info(f"Requesting profile {username}.")
     profile = get_object_or_404(Profile, user__username=username)
     context = {'profile': profile}
+    logger.info(f"Loading profile {username}.")
     return render(request, 'profiles/profile.html', context)
