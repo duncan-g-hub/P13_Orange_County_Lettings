@@ -4,5 +4,4 @@ venv
 .venv
 .idea
 .env
-*.sqlite3
 .coverage
