@@ -61,9 +61,14 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-          -t ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:${{ github.sha }} .
+          -t ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:${{ github.sha }} \
+          -t ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:latest .
 
 
-      - name: Push Docker image
+      - name: Push Docker image SHA
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:${{ github.sha }}
+
+      - name: Push Docker image latest
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:latest
