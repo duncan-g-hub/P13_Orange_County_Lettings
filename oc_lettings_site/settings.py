@@ -23,7 +23,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
-
 # Sentry
 sentry_sdk.init(
     dsn=os.getenv("SENTRY_DSN"),
