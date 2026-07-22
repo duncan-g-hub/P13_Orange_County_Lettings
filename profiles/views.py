@@ -6,6 +6,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 # Create your views here.
 # Sed placerat quam in pulvinar commodo.
 # Nullam laoreet consectetur ex, sed consequat libero pulvinar eget. Fusc
