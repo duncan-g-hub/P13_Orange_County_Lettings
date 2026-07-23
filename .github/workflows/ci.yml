@@ -2,9 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
 jobs:
   test:
@@ -72,3 +73,15 @@ jobs:
       - name: Push Docker image latest
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/oc-lettings:latest
+          
+
+  deploy:
+    needs: docker
+    if: github.ref == 'refs/heads/master'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Render deployment
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
