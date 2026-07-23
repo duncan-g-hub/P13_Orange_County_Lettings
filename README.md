@@ -3,8 +3,8 @@
 ## Objectif
  
 Site web réorganisé en une architecture modulaire afin d'améliorer la maintenabilité, la flexibilité et l'évolutivité du code. 
+
 Le projet inclut :
- 
 - Une séparation en 3 applications : `oc_lettings_site` (cœur du projet), `lettings` et `profiles`.
 - Une surveillance des erreurs en production via Sentry, couplée à des logs applicatifs.
 - Une suite de tests (unitaires et d'intégration) avec une couverture de code supérieure à 80 %.
@@ -170,7 +170,7 @@ La liste complète et versionnée se trouve dans `requirements.txt`.
     ```bash
        python manage.py runserver
     ```
-    Le site est accessible sur [http://localhost:8000](http://localhost:8000).
+    Le site est accessible sur http://localhost:8000.
  
 4. Lancer les outils qualité :
     ```bash
@@ -193,7 +193,7 @@ Prérequis : Docker Desktop installé avec l'intégration WSL2 activée pour vot
     ```
    Cette commande récupère l'image `duncangdev/oc-lettings:latest` sur Docker Hub et démarre le site.
  
-4. Le site est accessible sur [http://localhost:8000](http://localhost:8000).
+4. Le site est accessible sur http://localhost:8000.
 
 ---
 
@@ -219,6 +219,8 @@ Le pipeline CI/CD (GitHub Actions) se déclenche différemment selon la branche 
   
 
 Résumé du flux : `push` → test/lint → build & push image Docker (master uniquement) → déploiement Render (master uniquement, après succès du build).
+
+Le site est accessible publiquement sur : https://orange-county-lettings-t4nt.onrender.com/.
 
 ---
 
