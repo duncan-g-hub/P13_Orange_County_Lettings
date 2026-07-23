@@ -8,7 +8,7 @@ Le projet inclut :
 - Une séparation en 3 applications : `oc_lettings_site` (cœur du projet), `lettings` et `profiles`.
 - Une surveillance des erreurs en production via Sentry, couplée à des logs applicatifs.
 - Une suite de tests (unitaires et d'intégration) avec une couverture de code supérieure à 80 %.
-- Un pipeline CI/CD complet : lint, tests, build/push de l'image Docker, déploiement automatique.
+- Un pipeline CI/CD complet : lint, tests, build/push de l'image Docker, déploiement automatique avec Render.
 
 ---
 
@@ -121,8 +121,6 @@ P13_Orange_County_Lettings/
 - flake8 (linting)
 
 La liste complète et versionnée se trouve dans `requirements.txt`.
- 
-- Docker et Docker Compose (pour le lancement en conteneur)
 
 ---
 
