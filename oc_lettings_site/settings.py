@@ -19,9 +19,9 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "orange-county-lettings-hsfh.onrender.com"]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS")
 
 # Sentry
 sentry_sdk.init(
