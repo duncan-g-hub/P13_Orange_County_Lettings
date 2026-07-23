@@ -1,0 +1,8 @@
+services:
+  web:
+    image: duncangdev/oc-lettings:latest
+    pull_policy: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
