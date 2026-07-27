@@ -34,14 +34,14 @@ Cette documentation présente l'architecture technique de l'application,
 son installation, son utilisation, sa base de données, ses interfaces
 ainsi que ses procédures de déploiement.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Documentation technique
+..  toctree::
+    :maxdepth: 2
+    :caption: Documentation technique
 
-   installation
-   quickstart
-   architecture
-   database
-   api
-   usage
-   deployment
+    installation
+    quickstart
+    architecture
+    database
+    api
+    usage
+    deployment
