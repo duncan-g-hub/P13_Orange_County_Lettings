@@ -26,9 +26,9 @@ Prérequis
 Pour exécuter l'application localement avec Docker, les éléments
 suivants sont nécessaires :
 
-* Windows, macOS ou Linux ;
-* Docker Desktop ;
-* Git.
+* Windows, macOS ou Linux
+* Docker Desktop
+* Git
 
 Docker Desktop fournit Docker Engine ainsi que Docker Compose et
 permet de construire et d'exécuter les conteneurs Docker localement.

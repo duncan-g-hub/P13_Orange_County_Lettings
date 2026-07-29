@@ -48,9 +48,9 @@ Consulter le détail d'un bien
 La page de détail d'un bien présente les informations disponibles
 pour celui-ci, notamment :
 
-* son titre ;
-* son adresse ;
-* les informations associées à cette adresse.
+* son titre
+* son adresse
+* les informations associées à cette adresse
 
 Si le bien demandé n'existe pas, l'application affiche une page
 d'erreur ``404``.

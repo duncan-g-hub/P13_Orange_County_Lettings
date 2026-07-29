@@ -7,10 +7,10 @@ Prérequis
 Pour installer le projet localement, les éléments suivants sont
 nécessaires :
 
-* Git ;
-* Python 3.13 ;
-* pip ;
-* Docker, si l'application doit être exécutée avec son image Docker.
+* Git
+* Python 3.13
+* pip
+* Docker, si l'application doit être exécutée avec son image Docker
 
 Récupération du projet
 ----------------------
